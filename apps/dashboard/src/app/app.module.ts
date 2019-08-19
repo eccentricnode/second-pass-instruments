@@ -10,9 +10,12 @@ import { CoreStateModule } from '@second-pass/core-state';
 import { MaterialModule } from '@second-pass/material';
 
 import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+import { InstrumentsComponent } from './instruments/instruments.component';
+import { AppRoutingModule } from './routing.module';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LoginComponent, InstrumentsComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -23,6 +26,7 @@ import { AppComponent } from './app.component';
     CoreDataModule,
     CoreStateModule,
     MaterialModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
