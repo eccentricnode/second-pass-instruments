@@ -23,13 +23,13 @@ export const selectAllInstruments = createSelector(
 
 export const selectCurrentInstrumentId = createSelector(
   selectInstrumentsState,
-  fromInstruments.getSelectedInstrument
+  fromInstruments.getSelectedInstrumentId
 );
 
 export const selectCurrentInstrument = createSelector(
   selectInstrumentEntities,
   selectCurrentInstrumentId,
-  (instrumentId, instrumentEntities) => {
-    instrumentId ? instrumentEntities[instrumentId] : Object.assign({}, emptyInstrument)
+  (instrumentEntities, instrumentId) => {
+    return instrumentId ? instrumentEntities[instrumentId] : Object.assign({}, emptyInstrument)
   }
 );

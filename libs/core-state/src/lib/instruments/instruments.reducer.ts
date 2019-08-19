@@ -39,7 +39,7 @@ export function instrumentsReducer(state: InstrumentsState = initialState, actio
   }
 }
 
-export const getSelectedInstrument = (state: InstrumentsState) => state.selectedInstrumentId;
+export const getSelectedInstrumentId = (state: InstrumentsState) => state.selectedInstrumentId;
 
 // get the selectors...
 

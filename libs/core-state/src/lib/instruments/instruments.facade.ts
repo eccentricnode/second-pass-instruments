@@ -12,7 +12,7 @@ import { InstrumentsActionTypes } from './instruments.actions';
 @Injectable()
 export class InstrumentsFacade {
   allInstruments$ = this.store.pipe(select(selectAllInstruments));
-  selectedInstruments$ = this.store.pipe(select(selectCurrentInstrument));
+  selectedInstrument$ = this.store.pipe(select(selectCurrentInstrument));
 
   mutations$ = this.actions$
     .pipe(
