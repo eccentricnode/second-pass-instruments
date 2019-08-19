@@ -9,7 +9,7 @@
             </mat-card-title>
         </ng-template>
     </mat-card-header>
-    <form [formGroup="group"] (submit)="submit(form)" #form="ngForm">
+    <form [formGroup]="group" (submit)="submit(form)" #form="ngForm">
         <mat-card-content>
             <mat-form-field appearance="outline">
                 <mat-label>Name</mat-label>

@@ -1,7 +1,7 @@
 <mat-card>
     <mat-card-content>
         <h3 mat-subheader>Instruments</h3>
-        <mat-list>
+        <mat-list *ngIf="instruments.length; else elseBlock">
             <mat-list-item *ngFor="let instrument of instruments" class="mat-list-option"
                 (click)="select(instrument)">
                 <h4 mat-line>{{instrument.name}}</h4>
