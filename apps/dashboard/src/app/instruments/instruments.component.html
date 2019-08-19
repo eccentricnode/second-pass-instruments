@@ -1,9 +1,18 @@
 <div class="wrapper">
     <div class="list-grid">
-        <second-pass-instruments-list></second-pass-instruments-list>
+        <second-pass-instruments-list
+            [instruments]="instruments$ | async"
+            (selected)="selectInstrument($event)"
+            (deleted)="removeInstrument($event)">
+        </second-pass-instruments-list>
     </div>
 
     <div class="details-grid">
-        <second-pass-instrument-details></second-pass-instrument-details>
+        <second-pass-instrument-details
+            [group]="form"
+            [instrument]="selectedInstrument$ | async"
+            (submitted)="saveInstrument($event)"
+            (cancelled)="reset($event)">
+        </second-pass-instrument-details>
     </div>
 </div>
