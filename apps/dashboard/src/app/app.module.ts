@@ -13,9 +13,11 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { InstrumentsComponent } from './instruments/instruments.component';
 import { AppRoutingModule } from './routing.module';
+import { InstrumentsListComponent } from './instruments/instruments-list/instruments-list.component';
+import { InstrumentDetailsComponent } from './instruments/instrument-details/instrument-details.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, InstrumentsComponent],
+  declarations: [AppComponent, LoginComponent, InstrumentsComponent, InstrumentsListComponent, InstrumentDetailsComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
